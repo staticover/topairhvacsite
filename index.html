@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Top Air HVAC | Heating & Cooling | (919) 351-5082</title>
+<meta name="description" content="Top Air HVAC — serving Smithfield, Selma, Raleigh, Clayton, Garner, Goldsboro, Kenly, Wilson, Knightdale, Zebulon and surrounding areas. Call (919) 351-5082."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#E03A2F;
+  --red-dark:#B52E25;
+  --navy:#0B1C2E;
+  --navy-mid:#112436;
+  --sky:#2A8FCB;
+  --sky-light:#EBF5FB;
+  --white:#fff;
+  --off:#F7F9FC;
+  --gray:#5A6A7A;
+  --lgray:#D4DCE5;
+  --cond:'Barlow Condensed',sans-serif;
+  --body:'Barlow',sans-serif;
+  --r:5px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--white);color:var(--navy);line-height:1.6;overflow-x:hidden}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--red);padding:9px 5%;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topbar-l{font-family:var(--cond);font-size:.9rem;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.9);display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.topbar-l span{display:flex;align-items:center;gap:5px}
+.topbar-l span svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.topbar-r a{font-family:var(--cond);font-size:1rem;font-weight:800;letter-spacing:.08em;color:#fff;text-decoration:none}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:66px;box-shadow:0 3px 20px rgba(0,0,0,.25)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:40px;height:40px;background:var(--red);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:var(--cond);font-size:1.3rem;font-weight:900;letter-spacing:.06em;color:#fff;text-transform:uppercase}
+.logo-sub{font-family:var(--body);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-family:var(--cond);font-size:1rem;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.65);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-phone{font-family:var(--cond);font-size:1.1rem;font-weight:800;color:var(--red);text-decoration:none;letter-spacing:.04em}
+.nav-cta{background:var(--red);color:#fff;padding:10px 20px;border-radius:var(--r);font-family:var(--cond);font-weight:800;font-size:1rem;letter-spacing:.06em;text-decoration:none;text-transform:uppercase;transition:background .2s,transform .15s;white-space:nowrap}
+.nav-cta:hover{background:var(--red-dark);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px}
+
+/* ── MOBILE MENU ── */
+.mmenu{display:none;position:fixed;inset:0;background:var(--navy);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.mmenu.open{display:flex}
+.mmenu a{font-family:var(--cond);font-size:1.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;text-decoration:none;transition:color .2s}
+.mmenu a:hover,.mmenu a:focus{color:var(--red)}
+.mmenu .mcta{background:var(--red);padding:14px 40px;border-radius:var(--r)}
+.mmenu .mcta:hover{background:var(--red-dark)}
+.mclose{position:absolute;top:20px;right:5%;background:none;border:none;cursor:pointer;font-size:1.6rem;color:rgba(255,255,255,.4);padding:8px;line-height:1}
+
+/* ── HERO ── */
+.hero{background:var(--navy);position:relative;overflow:hidden;padding:80px 5% 70px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(42,143,203,.12) 0%,transparent 60%),radial-gradient(ellipse at 10% 80%,rgba(224,58,47,.08) 0%,transparent 50%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:700px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(224,58,47,.15);border:1px solid rgba(224,58,47,.4);border-radius:3px;padding:5px 14px;font-family:var(--cond);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:22px}
+.badge-dot{width:7px;height:7px;background:var(--red);border-radius:50%;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:var(--cond);font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:.95;color:#fff;text-transform:uppercase;letter-spacing:.02em;margin-bottom:20px}
+.hero h1 .accent{color:var(--red);display:block}
+.hero h1 .thin{font-weight:300;letter-spacing:.08em}
+.hero-sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.5);max-width:500px;line-height:1.9;margin-bottom:10px}
+.hero-areas{font-size:.82rem;color:rgba(255,255,255,.3);font-weight:400;max-width:520px;line-height:1.7;margin-bottom:30px}
+.hero-areas strong{color:rgba(255,255,255,.5);font-weight:600}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.btn-red{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:16px 32px;border-radius:var(--r);font-family:var(--cond);font-size:1.1rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 24px rgba(224,58,47,.4);border:none;cursor:pointer}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 32px rgba(224,58,47,.5)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:15px 26px;border-radius:var(--r);font-family:var(--cond);font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid rgba(255,255,255,.2);transition:border-color .2s,background .2s;cursor:pointer}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06)}
+.hero-stats{display:flex;gap:0;border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden;width:fit-content;flex-wrap:wrap}
+.hstat{padding:14px 26px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.hstat:last-child{border-right:none}
+.hstat-v{font-family:var(--cond);font-size:1.6rem;font-weight:900;color:#fff;line-height:1;letter-spacing:.04em}
+.hstat-l{font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:3px}
+
+/* ── EMERGENCY BAR ── */
+.emergency{background:var(--red);padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.emerg-l{display:flex;align-items:center;gap:14px}
+.emerg-icon{width:44px;height:44px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.emerg-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.emerg-text strong{display:block;font-family:var(--cond);font-size:1.2rem;font-weight:800;letter-spacing:.04em;color:#fff;text-transform:uppercase}
+.emerg-text span{font-size:.82rem;color:rgba(255,255,255,.7)}
+.emerg-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--red);padding:13px 28px;border-radius:var(--r);font-family:var(--cond);font-size:1.1rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.emerg-btn:hover{background:var(--off);transform:translateY(-1px)}
+
+/* ── TRUST ── */
+.trust{background:var(--off);border-bottom:1px solid var(--lgray);padding:12px 5%;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:7px;font-family:var(--cond);font-size:.88rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
+.ti svg{width:13px;height:13px;stroke:var(--red);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.tisep{width:1px;height:16px;background:var(--lgray)}
+
+/* ── SERVICES ── */
+.services{background:var(--white);padding:80px 5%}
+.section-top{margin-bottom:48px}
+.eyebrow{font-family:var(--cond);font-size:.8rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--red)}
+.h2{font-family:var(--cond);font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1;color:var(--navy);text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px}
+.h2 em{color:var(--red);font-style:normal}
+.sub{font-size:.95rem;font-weight:300;color:var(--gray);max-width:480px;line-height:1.85}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.svc-card{background:var(--off);border:1.5px solid var(--lgray);border-radius:var(--r);padding:28px 24px;transition:all .25s;position:relative;overflow:hidden;cursor:default}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.svc-card:hover{border-color:rgba(224,58,47,.35);box-shadow:0 12px 40px rgba(11,28,46,.1);transform:translateY(-4px);background:#fff}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-icon{width:48px;height:48px;background:rgba(224,58,47,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .25s}
+.svc-card:hover .svc-icon{background:var(--red)}
+.svc-icon svg{width:23px;height:23px;stroke:var(--red);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
+.svc-card:hover .svc-icon svg{stroke:#fff}
+.svc-card h3{font-family:var(--cond);font-size:1.2rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);margin-bottom:7px}
+.svc-card p{font-size:.83rem;color:var(--gray);line-height:1.75}
+.svc-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;align-items:center;justify-content:center}
+
+/* ── AREAS ── */
+.areas{background:var(--navy);padding:70px 5%}
+.areas .eyebrow{color:rgba(255,255,255,.4)}
+.areas .eyebrow::before{background:rgba(255,255,255,.2)}
+.areas .h2{color:#fff}
+.areas-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.area-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:10px 18px;font-family:var(--cond);font-size:.95rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);transition:all .2s;cursor:default}
+.area-tag:hover{background:rgba(224,58,47,.15);border-color:rgba(224,58,47,.4);color:#fff}
+.area-tag.primary{background:rgba(224,58,47,.12);border-color:rgba(224,58,47,.35);color:#fff}
+.areas-note{font-size:.82rem;color:rgba(255,255,255,.3);margin-top:18px;font-style:italic}
+
+/* ── WHY US ── */
+.why{background:var(--off);padding:80px 5%}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:44px}
+.why-card{background:#fff;border:1.5px solid var(--lgray);border-radius:var(--r);padding:24px 20px;transition:all .25s}
+.why-card:hover{box-shadow:0 10px 36px rgba(11,28,46,.09);transform:translateY(-3px);border-color:rgba(224,58,47,.3)}
+.why-icon{width:42px;height:42px;background:rgba(224,58,47,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.why-icon svg{width:19px;height:19px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-family:var(--cond);font-size:1.05rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);margin-bottom:5px}
+.why-card p{font-size:.8rem;color:var(--gray);line-height:1.75}
+
+/* ── REVIEWS ── */
+.reviews{background:var(--white);padding:80px 5%}
+.reviews-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:42px;gap:16px;flex-wrap:wrap}
+.score-block{display:flex;align-items:center;gap:14px;background:var(--navy);border-radius:var(--r);padding:14px 22px}
+.score-num{font-family:var(--cond);font-size:2.8rem;font-weight:900;color:#fff;line-height:1;letter-spacing:.04em}
+.score-stars{display:flex;gap:3px;margin-bottom:3px}
+.score-stars svg{width:14px;height:14px;fill:#F59E0B}
+.score-lbl{font-family:var(--cond);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.rev-card{background:var(--off);border:1.5px solid var(--lgray);border-radius:var(--r);padding:24px;transition:all .25s}
+.rev-card:hover{box-shadow:0 10px 36px rgba(11,28,46,.09);transform:translateY(-3px);border-color:rgba(224,58,47,.25)}
+.rev-stars{display:flex;gap:3px;margin-bottom:12px}
+.rev-stars svg{width:13px;height:13px;fill:#F59E0B}
+.rev-quote{font-family:var(--cond);font-size:1.1rem;font-weight:700;letter-spacing:.02em;color:var(--navy);margin-bottom:7px;line-height:1.3}
+.rev-body{font-size:.82rem;color:var(--gray);line-height:1.8;font-style:italic;margin-bottom:16px}
+.rev-divider{height:1px;background:var(--lgray);margin-bottom:14px}
+.rev-author{display:flex;align-items:center;gap:10px}
+.rev-av{width:36px;height:36px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-size:.9rem;font-weight:800;color:#fff;flex-shrink:0}
+.rev-name{font-family:var(--cond);font-size:.88rem;font-weight:800;letter-spacing:.04em;color:var(--navy)}
+.rev-meta{font-size:.67rem;color:var(--gray);margin-top:1px}
+
+/* ── FORM ── */
+.schedule{background:var(--navy);padding:80px 5%}
+.schedule .eyebrow{color:rgba(255,255,255,.4)}
+.schedule .eyebrow::before{background:rgba(255,255,255,.2)}
+.schedule .h2{color:#fff}
+.schedule .sub{color:rgba(255,255,255,.4)}
+.sch-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;margin-top:50px;align-items:start}
+.sch-left{}
+.promises{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.promises li{display:flex;align-items:flex-start;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7}
+.chk{width:22px;height:22px;min-width:22px;background:rgba(224,58,47,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;border:1px solid rgba(224,58,47,.35);flex-shrink:0}
+.chk svg{width:10px;height:10px;stroke:var(--red);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.phone-block{margin-top:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:20px 22px;display:flex;align-items:center;gap:14px}
+.ph-ico{width:46px;height:46px;min-width:46px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ph-ico svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ph-text strong{display:block;font-family:var(--cond);font-size:1.4rem;font-weight:900;letter-spacing:.04em;color:#fff}
+.ph-text span{font-size:.74rem;color:rgba(255,255,255,.35);letter-spacing:.06em;text-transform:uppercase}
+.avail-bar{margin-top:14px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:var(--r);padding:13px 17px;display:flex;align-items:center;gap:11px}
+.avail-dot{width:10px;height:10px;min-width:10px;background:#22C55E;border-radius:50%;box-shadow:0 0 0 4px rgba(34,197,94,.2);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 8px rgba(34,197,94,.06)}}
+.avail-bar strong{display:block;font-family:var(--cond);font-size:.95rem;font-weight:800;letter-spacing:.04em;color:#fff;text-transform:uppercase}
+.avail-bar span{font-size:.72rem;color:rgba(255,255,255,.35)}
+
+/* FORM CARD */
+.form-card{background:#fff;border-radius:var(--r);padding:38px 34px;box-shadow:0 12px 50px rgba(0,0,0,.3)}
+.form-card h3{font-family:var(--cond);font-size:1.8rem;font-weight:900;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);margin-bottom:4px}
+.form-card>p{font-size:.82rem;color:var(--gray);margin-bottom:22px}
+.fg{margin-bottom:13px}
+.fg label{display:block;font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 14px;border:1.5px solid var(--lgray);border-radius:var(--r);font-family:var(--body);font-size:.9rem;color:var(--navy);background:var(--off);outline:none;appearance:none;transition:border-color .2s,box-shadow .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(224,58,47,.1);background:#fff}
+.fg textarea{resize:vertical;min-height:85px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsub{width:100%;padding:16px;background:var(--red);color:#fff;border:none;border-radius:var(--r);font-family:var(--cond);font-size:1.1rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;margin-top:4px;box-shadow:0 4px 20px rgba(224,58,47,.35)}
+.fsub:hover{background:var(--red-dark);transform:translateY(-1px);box-shadow:0 8px 28px rgba(224,58,47,.45)}
+.fnote{text-align:center;font-size:.68rem;color:var(--gray);margin-top:9px}
+.fsuccess{display:none;text-align:center;padding:40px 0}
+.sico{width:58px;height:58px;background:rgba(224,58,47,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.sico svg{width:26px;height:26px;stroke:var(--red);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.fsuccess h4{font-family:var(--cond);font-size:1.8rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);margin-bottom:7px}
+.fsuccess p{font-size:.86rem;color:var(--gray)}
+
+/* ── CTA BAND ── */
+.ctaband{background:var(--red);padding:70px 5%;text-align:center;position:relative;overflow:hidden}
+.ctaband::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.ctaband h2{font-family:var(--cond);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:.03em;text-transform:uppercase;color:#fff;margin-bottom:10px;position:relative;z-index:1;line-height:1.05}
+.ctaband p{font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:32px;position:relative;z-index:1}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;position:relative;z-index:1}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--red);padding:16px 32px;border-radius:var(--r);font-family:var(--cond);font-size:1.1rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.btn-white:hover{background:var(--off);transform:translateY(-2px)}
+.btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:15px 28px;border-radius:var(--r);font-family:var(--cond);font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid rgba(255,255,255,.4);transition:all .2s}
+.btn-ghost-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:48px 5% 20px}
+.ft-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:20px}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ft-logo-icon{width:34px;height:34px;background:var(--red);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.ft-logo-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ft-logo-name{font-family:var(--cond);font-size:1.15rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.ft-about{font-size:.79rem;color:rgba(255,255,255,.3);line-height:1.85;max-width:280px;margin-bottom:18px}
+.ft-contact a{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.5);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s;margin-bottom:8px}
+.ft-contact a:hover{color:#fff}
+.ft-contact a svg{width:11px;height:11px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.fc h4{font-family:var(--cond);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:14px}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fc ul a{color:rgba(255,255,255,.4);text-decoration:none;font-size:.8rem;transition:color .2s}
+.fc ul a:hover{color:#fff}
+.fbot{display:flex;align-items:center;justify-content:space-between;font-size:.68rem;color:rgba(255,255,255,.18);flex-wrap:wrap;gap:7px}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .nav-links,.nav-phone{display:none}
+  .hamburger{display:flex}
+  .sch-layout{grid-template-columns:1fr;gap:36px}
+  .ft-inner{grid-template-columns:1fr;gap:28px}
+  .reviews-top{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:640px){
+  .hero{padding:60px 5% 50px}
+  .hero h1{font-size:3.2rem}
+  .hero-btns{flex-direction:column}
+  .btn-red,.btn-ghost{width:100%;justify-content:center}
+  .hero-stats{width:100%}
+  .hstat{flex:1}
+  .emergency{flex-direction:column;text-align:center}
+  .emerg-l{flex-direction:column;text-align:center}
+  .form-card{padding:22px 16px}
+  .fg-row{grid-template-columns:1fr}
+  .cta-btns{flex-direction:column;align-items:center}
+  .ctaband h2{font-size:2.2rem}
+  .trust{gap:14px}
+  .topbar{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-l">
+    <span>
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (919) 351-5082
+    </span>
+    <span>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      24/7 Emergency Service
+    </span>
+    <span>
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Smithfield, NC &amp; Surrounding Areas
+    </span>
+  </div>
+  <div class="topbar-r">
+    <a href="tel:9193515082">(919) 351-5082</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#home">
+    <img src="top_air_no_background.png" alt="Top Air HVAC" style="height:52px;width:auto;display:block;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#areas">Service Area</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#schedule">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:9193515082" class="nav-phone">(919) 351-5082</a>
+    <a href="#schedule" class="nav-cta">Free Quote</a>
+  </div>
+  <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mobileMenu">
+  <button class="mclose" id="menuClose">&#x2715;</button>
+  <img src="top_air_no_background.png" alt="Top Air HVAC" style="height:60px;width:auto;margin-bottom:8px;">
+  <a href="#services" class="mLink">Services</a>
+  <a href="#areas" class="mLink">Service Area</a>
+  <a href="#reviews" class="mLink">Reviews</a>
+  <a href="tel:9193515082" class="mLink" style="color:var(--red);font-size:1.4rem">(919) 351-5082</a>
+  <a href="#schedule" class="mLink mcta">Free Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><div class="badge-dot"></div>Smithfield, NC's HVAC Experts</div>
+    <h1>
+      <span class="thin">Keep Your</span>
+      <span class="accent">Home Comfortable</span>
+      <span>Year-Round.</span>
+    </h1>
+    <p class="hero-sub">Heating, cooling, and air quality solutions for homeowners across Johnston, Wayne, Wake, and Wilson counties — done right, done fast, done honest.</p>
+    <p class="hero-areas"><strong>Serving:</strong> Smithfield · Selma · Raleigh · Clayton · Garner · Goldsboro · Kenly · Wilson · Knightdale · Zebulon · and more</p>
+    <div class="hero-btns">
+      <a href="tel:9193515082" class="btn-red">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (919) 351-5082
+      </a>
+      <a href="#schedule" class="btn-ghost">Get Free Estimate</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-v">24/7</div><div class="hstat-l">Emergency</div></div>
+      <div class="hstat"><div class="hstat-v">Free</div><div class="hstat-l">Estimates</div></div>
+      <div class="hstat"><div class="hstat-v">5★</div><div class="hstat-l">Rated</div></div>
+      <div class="hstat"><div class="hstat-v">Local</div><div class="hstat-l">Family Owned</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="ti"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Insured</div>
+  <div class="tisep"></div>
+  <div class="ti"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>24/7 Emergency Calls</div>
+  <div class="tisep"></div>
+  <div class="ti"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Upfront Pricing</div>
+  <div class="tisep"></div>
+  <div class="ti"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Family Owned</div>
+  <div class="tisep"></div>
+  <div class="ti"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Satisfaction Guaranteed</div>
+</div>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency">
+  <div class="emerg-l">
+    <div class="emerg-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+    <div class="emerg-text">
+      <strong>AC Down? Heat Not Working? Call Now — 24/7 Emergency Service</strong>
+      <span>We respond fast and won't leave you hanging — day or night, weekends included</span>
+    </div>
+  </div>
+  <a href="tel:9193515082" class="emerg-btn">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    (919) 351-5082
+  </a>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-top">
+    <div class="eyebrow">What We Do</div>
+    <h2 class="h2">Full <em>HVAC</em> Services</h2>
+    <p class="sub">Residential and light commercial heating and cooling — installation, repair, and maintenance across the region.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M16 12h6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/></svg></div>
+      <h3>AC Installation</h3>
+      <p>New system installs sized right for your home. We carry top brands and do the job clean, fast, and by the book.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+      <h3>AC Repair</h3>
+      <p>Not cooling? Making noise? We diagnose and fix it fast — same-day service available. No part guessing games.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg></div>
+      <h3>Heating Repair</h3>
+      <p>Furnace, heat pump, gas or electric — we fix all types. No heat in winter is an emergency we take seriously.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+      <h3>Heat Pump Services</h3>
+      <p>Sales, installation, and repair of heat pumps for year-round efficiency. Great for NC's climate.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v11M2 9h20M9 14h6m-6 4h6"/></svg></div>
+      <h3>Preventive Maintenance</h3>
+      <p>Annual tune-ups keep your system running efficiently, extend equipment life, and catch problems before they become expensive.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <h3>New Construction</h3>
+      <p>Building a home or adding on? We handle full HVAC system design and install for new construction projects.</p>
+    </div>
+  </div>
+  <div class="svc-cta-row">
+    <a href="tel:9193515082" class="btn-red">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call For Service
+    </a>
+    <a href="#schedule" class="btn-ghost" style="color:var(--navy);border-color:var(--lgray)">Request Free Estimate</a>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="eyebrow">Where We Work</div>
+  <h2 class="h2">We Come to <em>You</em></h2>
+  <p class="sub" style="color:rgba(255,255,255,.4)">Covering Johnston, Wayne, Wake, and Wilson counties. If you're nearby, we can help — give us a call.</p>
+  <div class="areas-grid">
+    <div class="area-tag primary">Smithfield</div>
+    <div class="area-tag primary">Selma</div>
+    <div class="area-tag">Clayton</div>
+    <div class="area-tag">Garner</div>
+    <div class="area-tag">Raleigh</div>
+    <div class="area-tag">Goldsboro</div>
+    <div class="area-tag">Kenly</div>
+    <div class="area-tag">Wilson</div>
+    <div class="area-tag">Knightdale</div>
+    <div class="area-tag">Zebulon</div>
+    <div class="area-tag">Four Oaks</div>
+    <div class="area-tag">Benson</div>
+    <div class="area-tag">Princeton</div>
+    <div class="area-tag">Pine Level</div>
+    <div class="area-tag">Micro</div>
+  </div>
+  <p class="areas-note">Not on the list? Call us — if you're in the area, chances are we can get to you.</p>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="section-top">
+    <div class="eyebrow">Why Top Air</div>
+    <h2 class="h2">What Makes Us <em>Different</em></h2>
+    <p class="sub">We're local. We're honest. We do good work and stand behind it.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <h3>Local &amp; Family Owned</h3>
+      <p>We live in this community. Our reputation is on the line with every job — we don't take that lightly.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h3>Fast Response Times</h3>
+      <p>When your AC dies in August, waiting isn't an option. We move fast and prioritize emergency calls.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <h3>No Hidden Fees</h3>
+      <p>We quote the job before we start. What we say it costs is what you pay. No surprises at the end.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Quality Workmanship</h3>
+      <p>Licensed technicians who actually know what they're doing. We don't guess — we diagnose and fix it right.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <h3>All Brands Serviced</h3>
+      <p>Carrier, Trane, Lennox, Goodman, Rheem — we work on all major brands and stock common parts.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <h3>Flexible Scheduling</h3>
+      <p>Weekdays, weekends, evenings — we work around your schedule, not the other way around.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-top">
+    <div>
+      <div class="eyebrow">Customer Reviews</div>
+      <h2 class="h2">What Customers <em>Say</em></h2>
+    </div>
+    <div class="score-block">
+      <div class="score-num">5.0</div>
+      <div>
+        <div class="score-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="score-lbl">5-Star Rated</div>
+      </div>
+    </div>
+  </div>
+  <div class="rev-grid">
+    <div class="rev-card reveal">
+      <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="rev-quote">"AC went out on the hottest day of the year."</div>
+      <p class="rev-body">Called Top Air at 8am, they were at my house by noon. Had it running by 2. Price was fair and the tech explained everything. Will never call anyone else.</p>
+      <div class="rev-divider"></div>
+      <div class="rev-author"><div class="rev-av">T</div><div><div class="rev-name">Terry B.</div><div class="rev-meta">Smithfield, NC · Google Review</div></div></div>
+    </div>
+    <div class="rev-card reveal">
+      <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="rev-quote">"Honest, local, and they do great work."</div>
+      <p class="rev-body">Got three quotes for a new unit. Top Air was competitive and the most straightforward about what I actually needed. New system runs great. Recommend to everyone in Johnston County.</p>
+      <div class="rev-divider"></div>
+      <div class="rev-author"><div class="rev-av" style="background:#1a3a5c">M</div><div><div class="rev-name">Michelle H.</div><div class="rev-meta">Clayton, NC · Google Review</div></div></div>
+    </div>
+    <div class="rev-card reveal">
+      <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="rev-quote">"Use them for all our rental properties."</div>
+      <p class="rev-body">Manage several rentals around Selma and Goldsboro. Top Air handles all the HVAC. Fast, reliable, tenants never complain. That's what matters when you have properties to maintain.</p>
+      <div class="rev-divider"></div>
+      <div class="rev-author"><div class="rev-av" style="background:#2a5a3c">R</div><div><div class="rev-name">Randy L.</div><div class="rev-meta">Selma, NC · Facebook Review</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM / SCHEDULE -->
+<section class="schedule" id="schedule">
+  <div class="eyebrow">Get A Quote</div>
+  <h2 class="h2">Request Your <em>Free Estimate</em></h2>
+  <p class="sub">Fill this out and we'll get back to you fast. Need us now? Call directly.</p>
+  <div class="sch-layout">
+    <div class="sch-left">
+      <ul class="promises">
+        <li><div class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Free estimates — full price before we start, no exceptions.</li>
+        <li><div class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Locally owned — real people answering, not a call center.</li>
+        <li><div class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Same-day and emergency service available.</li>
+        <li><div class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>All makes and models — residential and light commercial.</li>
+        <li><div class="chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Serving Smithfield, Selma, Clayton, Garner, Goldsboro &amp; more.</li>
+      </ul>
+      <div class="phone-block">
+        <div class="ph-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div class="ph-text"><strong>(919) 351-5082</strong><span>Call or Text Anytime</span></div>
+      </div>
+      <div class="avail-bar">
+        <div class="avail-dot"></div>
+        <div><strong>Now Accepting New Customers</strong><span>Appointments filling up — don't wait</span></div>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3>Free Estimate Request</h3>
+      <p>We respond same day. Takes 2 minutes to fill out.</p>
+      <form id="estForm">
+        <div class="fg-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="John" required/></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith" required/></div>
+        </div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="phoneInput" placeholder="(919) 000-0000" required/></div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com"/></div>
+        <div class="fg"><label>City / Town</label><input type="text" placeholder="Smithfield, Clayton, Selma..." required/></div>
+        <div class="fg">
+          <label>Service Needed</label>
+          <select required>
+            <option value="" disabled selected>Select a service</option>
+            <option>AC Repair</option>
+            <option>AC Installation / Replacement</option>
+            <option>Heating Repair</option>
+            <option>Heat Pump Service</option>
+            <option>Annual Maintenance / Tune-Up</option>
+            <option>New Construction HVAC</option>
+            <option>Emergency Service</option>
+            <option>Not sure — need diagnosis</option>
+          </select>
+        </div>
+        <div class="fg"><label>Describe the Problem (optional)</label><textarea placeholder="What's happening? When did it start? Any error codes, strange noises, or other details help us come prepared."></textarea></div>
+        <button type="submit" class="fsub">Send Request — It's Free &amp; No Obligation</button>
+        <p class="fnote">No spam. No pressure. We'll contact you to set up a time.</p>
+      </form>
+      <div class="fsuccess" id="formSuccess">
+        <div class="sico"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Got It — We'll Be In Touch.</h4>
+        <p>Need us sooner? Call <a href="tel:9193515082" style="color:var(--red);font-weight:700">(919) 351-5082</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="ctaband">
+  <h2>Don't Sweat It.<br>Call Top Air HVAC.</h2>
+  <p>Fast service. Honest pricing. Local team that shows up and gets it done.</p>
+  <div class="cta-btns">
+    <a href="tel:9193515082" class="btn-white">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call (919) 351-5082
+    </a>
+    <a href="#schedule" class="btn-ghost-white">Request Free Estimate</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div>
+      <div class="ft-logo">
+        <img src="top_air_no_background.png" alt="Top Air HVAC" style="height:48px;width:auto;display:block;">
+      </div>
+      <p class="ft-about">Local, family-owned HVAC company serving Johnston, Wayne, Wake, and Wilson counties. We fix heating and cooling the right way, at a fair price.</p>
+      <div class="ft-contact">
+        <a href="tel:9193515082"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 11.61 19.8 19.8 0 01.5 3a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.337 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(919) 351-5082</a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Smithfield, NC</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">AC Repair</a></li>
+        <li><a href="#services">AC Installation</a></li>
+        <li><a href="#services">Heating Repair</a></li>
+        <li><a href="#services">Heat Pumps</a></li>
+        <li><a href="#services">Maintenance</a></li>
+        <li><a href="#services">New Construction</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#areas">Service Area</a></li>
+        <li><a href="#why">Why Top Air</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#schedule">Free Estimate</a></li>
+        <li><a href="tel:9193515082">Call Now</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>&copy; 2025 Top Air HVAC. All rights reserved. Smithfield, NC.</span>
+    <span>(919) 351-5082 &nbsp;|&nbsp; Licensed &amp; Insured</span>
+  </div>
+</footer>
+
+<script>
+// MOBILE MENU
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('menuClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
+document.querySelectorAll('.mLink').forEach(l=>l.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
+
+// FORM SUBMIT
+document.getElementById('estForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+});
+
+// PHONE FORMAT
+document.getElementById('phoneInput').addEventListener('input',function(){
+  let v=this.value.replace(/\D/g,'');
+  if(v.length>=6) v='('+v.slice(0,3)+') '+v.slice(3,6)+'-'+v.slice(6,10);
+  else if(v.length>=3) v='('+v.slice(0,3)+') '+v.slice(3);
+  this.value=v;
+});
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+  });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay=(i%3)*0.09+'s';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
